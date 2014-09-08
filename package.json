@@ -1,0 +1,17 @@
+{
+  "name": "restpal",
+  "version": "0.0.1",
+  "description": "A small library for testing REST APIs, built with Node.js",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ryaneof/restpal.git"
+  },
+  "author": "ryaneof",
+  "license": "MIT",
+  "homepage": "https://github.com/ryaneof/restpal",
+  "dependencies": {
+    "request": "*",
+    "tv4": "*"
+  }
+}
