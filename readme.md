@@ -2,6 +2,8 @@
 
 A tiny library for testing REST APIs, built with Node.js, powered by [request](https://www.npmjs.org/package/request), [tv4](https://github.com/geraintluff/tv4).
 
+  [![NPM Version](https://img.shields.io/npm/v/restpal.svg?style=flat)](https://www.npmjs.org/package/restpal)
+
 ### Usage
 
 ```js
