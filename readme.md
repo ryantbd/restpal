@@ -33,9 +33,11 @@ restpal
 
 ### Installation
 
-```bash
+Install from NPM.
+
+```sh
 $ npm install restpal
-``` 
+```
 
 ### API
 
@@ -43,8 +45,8 @@ $ npm install restpal
 
 Will make a request with given arguments
 
-@url {String}
-@options {Object}
+- url {String}
+- options {Object}
 
 ```js
 restpal.get(url)
@@ -55,9 +57,9 @@ restpal.delete(url)
 
 #### .header(key, value), .header(options) 
 
-@key {String}
-@value {String} or {RegExp}
-@options {Object}
+- key {String}
+- value {String} or {RegExp}
+- options {Object}
 
 ```js
 restpal
@@ -79,7 +81,7 @@ restpal
 
 #### .status(code)
 
-@code {Number} HTTP Status Code
+- code {Number} HTTP Status Code
 
 ```js
 restpal
@@ -92,7 +94,7 @@ restpal
 
 JSON Schema Validation, link: [vocabulary examples](http://json-schema.org/examples.html)
 
-@options {Object} 
+- options {Object} 
 
 ```js
 restpal
@@ -116,7 +118,7 @@ restpal
 
 Request should finish in @time miliseconds.
 
-@time {Number} 
+- time {Number} 
 
 ```js
 restpal
@@ -129,7 +131,7 @@ restpal
 
 Check response body, throw an Error if it's wrong.
 
-@{Function}
+- {Function}
 
 ```js
 restpal
@@ -146,7 +148,7 @@ restpal
 
 Happy testing. 
 
-@{Function} optional
+- {Function} optional
 
 ```js
 restpal
