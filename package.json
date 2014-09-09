@@ -1,6 +1,6 @@
 {
   "name": "restpal",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A small library for testing REST APIs, built with Node.js",
   "main": "index.js",
   "repository": {
@@ -13,5 +13,11 @@
   "dependencies": {
     "request": "*",
     "tv4": "*"
+  },
+  "devDependencies": {
+    "express": "*",
+    "body-parser": "*",
+    "mocha": "*",
+    "should": "*"
   }
 }
