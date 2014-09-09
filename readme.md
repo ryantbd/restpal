@@ -2,7 +2,9 @@
 
 A tiny library for testing REST APIs, built with Node.js, powered by [request](https://www.npmjs.org/package/request), [tv4](https://github.com/geraintluff/tv4).
 
-  [![NPM Version](https://img.shields.io/npm/v/restpal.svg?style=flat)](https://www.npmjs.org/package/restpal)
+[![NPM Version](https://img.shields.io/npm/v/restpal.svg?style=flat)](https://npmjs.org/package/restpal)
+[![NPM Downloads](https://img.shields.io/npm/dm/restpal.svg?style=flat)](https://npmjs.org/package/restpal)
+[![Travis Status](https://img.shields.io/travis/ryaneof/restpal.svg?style=flat)](https://travis-ci.org/ryaneof/restpal)
 
 ### Usage
 
