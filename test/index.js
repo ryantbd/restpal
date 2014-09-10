@@ -194,7 +194,7 @@ describe('RESTpal methods avilability', function () {
         .get(url)
         .schema({
           type: 'string',
-          pattern: /get/
+          equals: 'get'
         })
       .run(done);
     });
