@@ -215,6 +215,50 @@ describe('RESTpal methods avilability', function () {
     });
   });
 
+  describe('.pattern(options)', function () {
+    it('should pass right patterns', function (done) {
+      restpal
+        .get(url)
+        .pattern({
+          status: 200,
+          timer: 2000,
+          header: {
+            'x-powered-by': 'Express',
+            'content-type': /text\/html/
+          },
+          schema: {
+            type: 'string',
+            pattern: /get/
+          }
+        })
+      .run(done);
+    });
+
+    it('should fail wrong if there\'s wrong pattern', function (done) {
+      restpal
+        .get(url)
+        .pattern({
+          status: 200,
+          timer: 2000,
+          header: {
+            'x-powered-by': 'Express',
+            'content-type': /text\/html/
+          },
+          schema: {
+            type: 'object',
+            pattern: /get/
+          }
+        })
+      .run(function (err) {
+        if (err) {
+          done();
+        } else {
+          done(new Error('should fail wrong if there\'s wrong pattern'));
+        }
+      });
+    });
+  });
+
   describe('.check(function (restponse) { })', function () {
     it('should contain things restpal needed', function (done) {
       restpal

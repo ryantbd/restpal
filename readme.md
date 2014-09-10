@@ -25,6 +25,23 @@ restpal
     }
   })
 .run();
+
+// OR
+
+restpal
+  .get('http://your.api/to-test')
+  .pattern({
+    status: 200,
+    timer: 2000,
+    header: {
+      'content-type': /json/
+    },
+    schema: {
+      type: 'string',
+      pattern: /^[a-z]*$/
+    }
+  })
+.run();
 ```
 
 ### Feature:
@@ -44,8 +61,6 @@ $ npm install restpal
 ```
 
 ### API
-
-
 
 #### restpal(url, options)
 
@@ -144,6 +159,29 @@ restpal
 .run()
 ```
 
+#### .pattern(options)
+
+Test from a JSON Object which contains the expected fields like `status`, `header`, `timer`, `schema`
+
+- options {Object}
+
+```js
+restpal
+  .get(url)
+  .pattern({
+    status: 200,
+    timer: 2000,
+    header: {
+      'content-length', /\d/
+    },
+    schema: {
+      type: 'string',
+      pattern: /^[a-z]*$/
+    }
+  })
+.run()
+```
+
 #### .check(function (res) { })
 
 Check response body, throw an Error if it's wrong.
@@ -170,28 +208,14 @@ Happy testing.
 ```js
 restpal
   .get(url)
-  .header('content-length', /\d/)
-  .header('content-type', /json/)
   .status(200)
-  .timer(1000)
-  .schema({
-    type: 'object',
-    required: [
-      'status', 'msg'
-    ],
-    properties: {
-      status: {
-        type: 'number',
-        pattern: /\d/
-      }
-    }
-  })
-  .check(function (res) {
-    if (!res.headers) {
-      throw new Error(':lol');
-    }
-  })
-.run()
+.run(function (err) {
+  if (err) {
+    console.log(err)
+  } else {
+    throw new Error(':lol');
+  }
+})
 ```
 
 ### License:
