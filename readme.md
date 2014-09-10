@@ -45,7 +45,23 @@ $ npm install restpal
 
 ### API
 
-#### .get(), .post(), .put(), .delete()
+
+
+#### restpal(url, options)
+
+Provide common used REST methods: `.get()`, `.post()`, `.put()`, `.delete()`, It's just a wrapper of `lib/restpal.js`
+
+- url {String}
+- options {Object}
+
+```js
+restpal.get(url, options)
+restpal.post(url, options)
+restpal.put(url, options)
+restpal.delete(url, options)
+```
+
+#### new Restpal(url, options)
 
 Will make a request with given arguments
 
@@ -53,10 +69,7 @@ Will make a request with given arguments
 - options {Object}
 
 ```js
-restpal.get(url)
-restpal.post(url, options)
-restpal.put(url, options)
-restpal.delete(url)
+new Restpal(url, options).status(200).run();
 ```
 
 #### .header(key, value), .header(options) 
