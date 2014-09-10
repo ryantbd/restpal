@@ -5,19 +5,27 @@ function restpal (uri, options) {
 }
 
 restpal.get = function (uri, options) {
-  return restpal(uri, options).get();
+  options = options || {};
+  options.method = 'GET';
+  return restpal(uri, options);
 };
 
 restpal.post = function (uri, options) {
-  return restpal(uri, options).post();
+  options = options || {};
+  options.method = 'POST';
+  return restpal(uri, options);
 };
 
 restpal.put = function (uri, options) {
-  return restpal(uri, options).put();
+  options = options || {};
+  options.method = 'PUT';
+  return restpal(uri, options);
 };
 
 restpal.delete = function (uri, options) {
-  return restpal(uri, options).delete();
+  options = options || {};
+  options.method = 'DELETE';
+  return restpal(uri, options);
 };  
 
 module.exports = restpal;
